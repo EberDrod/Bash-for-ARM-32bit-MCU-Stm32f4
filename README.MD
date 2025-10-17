@@ -4,29 +4,29 @@ Este es un proyecto básico que hace parpadear un LED (verde o azul) en una plac
 
 ---
 
-## 🧩 Requisitos
+# 🧩 Requisitos
 
 Antes de compilar o flashear, instala estas herramientas en tu Mac.
 
-### ✅ Paso 1: Instala Homebrew
+# ✅ Paso 1: Instala Homebrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
-### ✅ Paso 2: Instala Dependencias para STM32F4
+# ✅ Paso 2: Instala Dependencias para STM32F4
 
 brew tap ArmMbed/homebrew-formulae
 brew install arm-none-eabi-gcc
 brew install stlink
 
-### ✅ Paso 3: Drivers
+# ✅ Paso 3: Drivers
 
 https://github.com/STMicroelectronics/STM32CubeF4/archive/refs/heads/master.zip
 
 
 
-### ✅ Paso 4: Estructura de Proyecto basico antes de compilacion 
+# ✅ Paso 4: Estructura de Proyecto basico antes de compilacion 
 
 
 stm32-blink/
@@ -36,12 +36,12 @@ stm32-blink/
 ├── Makefile                 ← Compilación con make
 └── build_and_flash.sh       ← Script para compilar y flashear automáticamente
 
-### ✅ Paso 5: Genera BINARIOS .HEX ´+ ARCHIVOS 
+# ✅ Paso 5: Genera BINARIOS .HEX ´+ ARCHIVOS 
 Make clean && make 
 
 
 
-### ✅ Paso 6: Estructura de Proyecto basico antes de compilacion 
+# ✅ Paso 6: Estructura de Proyecto basico antes de compilacion 
 make flash
 openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "program blink.hex verify reset exit"
 Open On-Chip Debugger 0.12.0
@@ -76,7 +76,7 @@ shutdown command invoked
 
 
 
-### ✅ Connecta tu placa & Verifica que tenga ok 
+# ✅ Connecta tu placa & Verifica que tenga ok 
 
 st-info --probe
 Found 1 stlink programmers
